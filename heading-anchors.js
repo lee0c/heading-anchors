@@ -180,7 +180,7 @@ class HeadingAnchors extends HTMLElement {
 		ph.classList.add(HeadingAnchors.classes.placeholder);
 		let content = this.getContent();
 		if(content) {
-			ph.textContent = content;
+			ph.innerHTML = content; // CHANGED HERE
 		}
 
 		ph.addEventListener("mouseover", (e) => {
