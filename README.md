@@ -1,5 +1,7 @@
 # `<heading-anchors>` Web Component
 
+> I needed a *single* change: rather than using `.textContent` to set the value of the heading anchor content, I wanted to use `.innerHTML` so I could use font-awesome icons in my anchors. See [line 183](https://github.com/lee0c/heading-anchors/blob/main/heading-anchors.js#L183) for change. Major props to Zach for this module.
+
 A web component to add and position sibling anchor links for heading elements (`h1`–`h6`) when they have an `id` attribute.
 
 Inspired by [David Darnes’ `<heading-anchors>`](https://github.com/daviddarnes/heading-anchors).
@@ -9,7 +11,7 @@ Inspired by [David Darnes’ `<heading-anchors>`](https://github.com/daviddarnes
 ## Installation
 
 ```
-npm install @zachleat/heading-anchors
+npm install https://github.com/lee0c/heading-anchors/tarball/main
 ```
 
 Include the `heading-anchors.js` file on your web site (via `<script type="module">`) and use `<heading-anchors>`.
