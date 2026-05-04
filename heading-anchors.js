@@ -160,12 +160,12 @@ class HeadingAnchors extends HTMLElement {
 			}
 		}
 	}
-
+/* no longer used, using aria-labelledby instead - see getAnchorElement
 	getAccessibleTextPrefix() {
 		// Useful for i18n
 		return this.getAttribute(HeadingAnchors.attributes.prefix) || "Jump to section titled";
 	}
-
+*/
 	getContent() {
 		if(this.hasAttribute(HeadingAnchors.attributes.content)) {
 			return this.getAttribute(HeadingAnchors.attributes.content);
@@ -199,7 +199,7 @@ class HeadingAnchors extends HTMLElement {
 		anchor.classList.add(HeadingAnchors.classes.anchor);
 
 		let content = this.getContent();
-		anchor.innerHTML = `<span class="${HeadingAnchors.classes.srOnly}">${this.getAccessibleTextPrefix()}: ${heading.textContent}</span>${content ? `<span aria-hidden="true">${content}</span>` : ""}`;
+		anchor.innerHTML = `<span aria-labelledby=${heading.id}>${content}</span>`; // CHANGED HERE
 
 		anchor.addEventListener("focus", e => {
 			let anchor = e.target.closest(`.${HeadingAnchors.classes.anchor}`);

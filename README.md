@@ -1,6 +1,9 @@
 # `<heading-anchors>` Web Component
 
-> I needed a *single* change: rather than using `.textContent` to set the value of the heading anchor content, I wanted to use `.innerHTML` so I could use font-awesome icons in my anchors. See [line 183](https://github.com/lee0c/heading-anchors/blob/main/heading-anchors.js#L183) for change. Major props to Zach for this module.
+> I needed a few small changes:
+> - rather than using `.textContent` to set the value of the heading anchor content, I wanted to use `.innerHTML` so I could use font-awesome icons in my anchors. See [line 183](https://github.com/lee0c/heading-anchors/blob/main/heading-anchors.js#L183) for change.
+> - instead of invisible text, using aria-labelledby to link the anchor to the heading itself. See [line 202](https://github.com/lee0c/heading-anchors/blob/main/heading-anchors.js#L202) for change.
+> Major props to Zach for this module.
 
 A web component to add and position sibling anchor links for heading elements (`h1`–`h6`) when they have an `id` attribute.
 
